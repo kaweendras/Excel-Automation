@@ -28,7 +28,7 @@ public class excelFile {
 
     FileInputStream inputStream = new FileInputStream(file);
 
-    Workbook guru99Workbook = null;
+    Workbook workBook1 = null;
 
     //Find the file extension by splitting file name in substring  and getting only extension name
 
@@ -40,7 +40,7 @@ public class excelFile {
 
     //If it is xlsx file then create object of XSSFWorkbook class
 
-    guru99Workbook = new XSSFWorkbook(inputStream);
+    workBook1 = new XSSFWorkbook(inputStream);
 
     }
 
@@ -50,13 +50,13 @@ public class excelFile {
 
         //If it is xls file then create object of HSSFWorkbook class
 
-        guru99Workbook = new HSSFWorkbook(inputStream);
+        workBook1 = new HSSFWorkbook(inputStream);
 
     }
 
     //Read sheet inside the workbook by its name
 
-    Sheet guru99Sheet = guru99Workbook.getSheet(sheetName);
+    Sheet guru99Sheet = workBook1.getSheet(sheetName);
 
     //Find number of rows in excel file
 
